@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+    <h1 class="index-title">My notes</h1>
+
+    {% if num_notes < 1 %}
+
+        <span>
+            <div class="flash">It have not been added notes yet...</div>
+            
+    
+            <a class="buttons flash-index" href="{{ url_for('create') }}">Create a note</a>
+        </span>
+            
+    {% else %}
+
+        {% for note in notes %}
+            <div class="box-post">
+                    <h2 class="note-title">{{ note.title }}</h2> 
+                    <h3 class="note-topic">{{ note.topic }}</h3>
+                    <div class="note-content">{{ note.content }}</div>
+
+                    <div class="note-done">
+                        <a class="buttons done-color" href="/done/{{ note.id }}">
+                        {% if note.done %}
+                            Done
+                        {% else %}
+                            Not done
+                        {% endif %}
+                        </a>
+                    </div>
+
+                    <div class="note-date">{{ note.created_at }}</div>
+                    
+                    <div class="edit-button buttons delete-edit"><a href="/edit/{{ note.id }}">Edit</a></div>
+                    <div class="delete-button buttons"><a href="/delete/{{ note.id }}">Delete</a></div>
+                    
+                </div>
+        {% endfor %}
+    
+    {% endif %}
+{% endblock %}

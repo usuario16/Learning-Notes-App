@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Created note{% endblock %}
+
+{% block content %}
+
+    <span>
+        <div class="flash">Your note have been registered!!</div>
+        
+        <a class="buttons flash-index" href="{{ url_for('index') }}">Notes</a>
+    </span>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Learning Notes</title>
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-8/256/Note-icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='forms.css') }}">
+</head>
+<body>
+    <header>
+
+        <nav class="nav">
+            <div class="title-site">Learning Notes</div>
+                
+            <div class="subtitle-site-1"><a href="{{ url_for('index') }}">Notes</a></div>
+            <div class="subtitle-site-2"><a href="{{ url_for('create') }}">Create</a></div>
+        </nav>
+
+    </header>
+
+    <div class="main-content"> 
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

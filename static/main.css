@@ -1,0 +1,181 @@
+
+/* Estilos generales */
+body{
+    margin: 0;
+    background-color:#fff;
+    font-family: 'Comfortaa', cursive;
+}
+
+input{
+    display: block;
+    font-family: 'Comfortaa', cursive;
+}
+
+textarea {
+    font-family: 'Comfortaa', cursive;
+}
+
+div{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+/* Estilos barra de navegación */
+.nav {
+    display: grid;
+    grid-template-columns: 1.8fr 2fr 1fr 2em 1fr;
+    color: #fff;
+    background-color: #141E30;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    align-items: center;
+}
+
+.nav > div > a{
+    color: #fff;
+    padding: 0.3em 1.2em 0.3em 1.2em;
+    background-color:#690000;
+    border-radius: 0.2em;
+    transition: 0.37s;
+}
+
+.nav > div > a:hover{
+    background-color:#692f00;
+}
+
+.title-site {
+    justify-self: center;
+    font-size: 2.3em;
+    grid-column-start: 1;
+}
+
+.subtitle-site-1 {
+    font-size: 1.5em;
+    justify-self: end;
+    grid-column-start: 3;
+    color: #fff;
+}
+
+.subtitle-site-2{
+    font-size: 1.5em;
+    justify-self: start;
+    grid-column-start: 5;
+    color: #fff;
+}
+
+
+/* Estilos para la caja principal */
+
+/* Página de inicio */
+.main-content {
+    margin-top: 2%;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-bottom: 2%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    background-color: #d0ff00;
+    color: #fff;
+    border-radius: 0.2em;
+    border: 1px solid #000;
+}
+
+.index-title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #000;
+}
+
+.box-post {
+    margin: 2em 17% 2em 17%;
+    border-radius: 0.2em;
+    padding: 1em 2em 1em 2em;
+    list-style: none;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+}
+
+.note-title {
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+    text-align: left;
+}
+
+.note-topic {
+    font-size: 1.2em;
+    margin-bottom: 1.3em;
+    color: rgba(0, 0, 0, 0.726);
+}
+
+.note-content {
+    margin-bottom: 2em;
+}
+
+.note-done {
+    margin-bottom: 0.8em;
+    text-align: right;
+}
+
+.done-color {
+    background-color: #141E30;
+}
+
+
+.note-date {
+    text-align: right;
+    margin-bottom: 0.8em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.buttons {
+    display: inline-block;
+    color: #fff;
+    padding: 0.4em 0.7em 0.4em 0.7em;
+    border-radius: 0.2em;
+}
+
+.buttons > a {
+    color: #fff;
+}
+
+.edit-button {
+    margin-right: 0.8em;
+    background-color: green;
+}
+
+.delete-button {
+    background-color: red;
+}
+
+
+/* Mensaje flash de inicio */
+span{
+    text-align: center; 
+    color:black;
+}
+
+.flash-index {
+    margin-top: 1em;
+    padding: 0.6em 0.7em 0.6em 0.7em;
+    background-color: #141E30;
+    display: block;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.flash {
+    font-size: 1.3em;
+}

@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Edit{% endblock %}
+
+{% block content %}
+    <h2 class="title-form">Edit note</h2>
+
+    <div class="form">
+        <form method="POST">
+
+            {{ token.csrf_token() }}
+
+            <input maxlength="80" required type="text" value="{{ note.title }}" name="title" placeholder="Title">
+            <input maxlength="80" required type="text" value="{{ note.topic }}" name="topic" placeholder="Topic">
+            <textarea maxlength="500"  required name="content" placeholder="Content" cols="30" rows="10">{{ note.content }}</textarea> 
+            
+            <div class="box-check">
+                <input id="done" type="checkbox" {% if note.done %}checked{% endif %} name="done">
+                Done
+            </div>
+            <a class="buttons delete-button-form" href="/delete/{{ note.id }}">Delete</a>
+            <input class="buttons button-form"  type="submit" value="Save note">
+        </form>
+    </div>
+{% endblock %}

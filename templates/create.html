@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Create note{% endblock %}
+
+{% block content %}
+
+    <h2 class="title-form">Create a new note</h2>
+
+    <div class="form">
+        <form method="POST">
+
+            {{ token.csrf_token() }}
+
+            <input maxlength="80" required type="text" name="title" placeholder="Title">
+            <input maxlength="80" required type="text" name="topic" placeholder="Topic">
+            <textarea maxlength="500" required name="content" placeholder="Content" cols="30" rows="10"></textarea>
+            <input class="buttons button-form" type="submit" value="Save note">
+        </form>
+    </div>
+
+    
+{% endblock %}
